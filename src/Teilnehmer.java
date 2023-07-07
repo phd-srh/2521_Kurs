@@ -3,10 +3,21 @@ public class Teilnehmer {
     private String name;
     private boolean eingeschrieben;
 
-    // Standard Konstrukter (Anzahl Parameter = Anzahl Attribute)
-    public Teilnehmer(int teilnehmernummer, String name) {
+    // Standard Konstruktor (Anzahl Parameter = Anzahl Attribute)
+    public Teilnehmer(int teilnehmernummer, String name, boolean eingeschrieben) {
         this.teilnehmernummer = teilnehmernummer;
         this.name = name;
+        this.eingeschrieben = eingeschrieben;
+    }
+
+    // Faulenzer Konstruktor (Einige Parameter können weggelassen werden,
+    // weil wir dafür schon Standardwerte haben)
+    public Teilnehmer(int teilnehmernummer, String name) {
+        this(teilnehmernummer, name, false);
+    }
+
+    public Teilnehmer(String name) {
+        this( (int)(Math.random() * 1000)+1, name, false);
     }
 
     public int getTeilnehmernummer() {
