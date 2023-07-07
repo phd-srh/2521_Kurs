@@ -10,7 +10,13 @@ public class Main {
         Dozent doz1 = new Dozent("DIL", "Dillinger");
         Dozent doz2 = new Dozent("KAS", "Kast");
 
-        System.out.println(kurs1.getFach() + ": " + kurs1.getAnzahlTeilnehmer());
-        System.out.println(kurs2.getFach() + ": " + kurs2.getAnzahlTeilnehmer());
+        // Achtung, diese Zeilen sind durch Copy+Paste entstanden!!
+        ausgabeKurs(kurs1);
+        ausgabeKurs(kurs2);
+
+    }
+
+    private static void ausgabeKurs(Kurs kurs) {
+        System.out.println(kurs.getFach() + ": " + kurs.getAnzahlTeilnehmer());
     }
 }
